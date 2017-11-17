@@ -31,6 +31,7 @@ end
 ```
 
 After changing user object relations `articles` and `profile` will be touched.
+Associations are required `updated_at` column.
 
 ## Contributing
 1. Fork it
