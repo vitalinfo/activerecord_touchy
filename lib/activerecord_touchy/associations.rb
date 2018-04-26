@@ -7,7 +7,7 @@ module ActiverecordTouchy
     end
 
     module ClassMethods
-      def has_many(name, scope = nil, options = {}, &extension)
+      def has_many(name, scope = nil, **options, &extension)
         touch = (scope.is_a?(Hash) ? scope : options).delete(:touch)
         result = super
 
@@ -20,7 +20,7 @@ module ActiverecordTouchy
         result
       end
 
-      def has_one(name, scope = nil, options = {})
+      def has_one(name, scope = nil, **options)
         touch = (scope.is_a?(Hash) ? scope : options).delete(:touch)
         result = super
 
